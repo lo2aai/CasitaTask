@@ -1,0 +1,27 @@
+<div class="container text-center">
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenu2"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" (click)="changeTheDisplayedDataMessagesgory('All')" type="button">All</button>
+      <button class="dropdown-item" (click)="changeTheDisplayedDataMessagesgory('Post')" type="button">Post</button>
+      <button class="dropdown-item" (click)="changeTheDisplayedDataMessagesgory('Nig')" type="button">Nig</button>
+      <button class="dropdown-item" (click)="changeTheDisplayedDataMessagesgory('Nat')" type="button">Nat</button>
+    </div>
+  </div>
+  <div class="row text-center">
+      <ul>
+          <li *ngFor="let displayedMessage of displayedMessages">
+              {{ displayedMessage.message }}
+          </li>
+      </ul>
+  </div>
+<!-- <p *ngFor="let item of list"></p> -->
