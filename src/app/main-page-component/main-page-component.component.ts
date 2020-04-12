@@ -229,6 +229,7 @@ export class MainPageComponentComponent implements OnInit {
   naturalMessages = [];
   displayedMessages;
 
+  // Istead All Of That I Tried JSON.Parse But The Object Dosent Has The Right Strucre Of Json 
   getAllMessages() {
     this.mainPageServices.getAllMessageObject().subscribe((data: any) => {
       this.messegeObject = data.feed.entry;
